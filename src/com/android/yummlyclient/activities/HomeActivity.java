@@ -6,39 +6,55 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.ActionBar;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.SearchView;
+import android.widget.AdapterView.OnItemClickListener;
+
 import com.android.yummlyclient.R;
-import com.android.yummlyclient.R.layout;
-import com.android.yummlyclient.R.menu;
 import com.android.yummlyclient.adapters.RecipesAdapter;
 import com.android.yummlyclient.helpers.yummlyclient;
 import com.android.yummlyclient.models.Recipe;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.SearchManager;
-import android.content.Context;
-import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.GridView;
-import android.widget.ListView;
-import android.widget.SearchView;
-
 public class HomeActivity extends FragmentActivity {
 	private yummlyclient client;
-	private GridView lvRecipes;
+	private GridView gvRecipes;
 	private RecipesAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		ActionBar actionBar = getActionBar();
+		actionBar.setHomeButtonEnabled(true);
 		setContentView(R.layout.activity_home);
-		lvRecipes = (GridView) findViewById(R.id.gvRecipes);
-		ArrayList<Recipe> recipes = new ArrayList<Recipe>();
+		gvRecipes = (GridView) findViewById(R.id.gvRecipes);
+		final ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 		adapter = new RecipesAdapter(this, recipes);
-		lvRecipes.setAdapter(adapter);
+		gvRecipes.setAdapter(adapter);
+		
+		gvRecipes.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> adapter, View parent,
+					int position, long rowId) {
+				Intent i = new Intent(getApplicationContext(),
+						RecipeDetailsActivity.class);
+				Recipe imageResult = recipes.get(position);
+				i.putExtra("result", imageResult);
+				startActivity(i);
+			}
+		});
+		//gvResults.setOnScrollListener(scrollListener);
+		
 		getRecipes();
 	}
 
@@ -74,8 +90,6 @@ public class HomeActivity extends FragmentActivity {
                 .getSearchableInfo(getComponentName()));
  
         return super.onCreateOptionsMenu(menu);
-		//return true;
-		//return super.onCreateOptionsMenu(menu);
 	}
 	
 	/*
@@ -85,8 +99,8 @@ public class HomeActivity extends FragmentActivity {
 	}*/
 	
 	public void onClickFavorites(MenuItem mi) { 
-	    //Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
-	    //startActivity(i);
+	    Intent i = new Intent(getApplicationContext(), RecipeDetailsActivity.class);
+	    startActivity(i);
 	}
 
 }

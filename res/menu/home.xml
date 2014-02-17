@@ -18,5 +18,5 @@
           android:title="@string/ic_favorites"
           android:onClick="onClickFavorites"
           android:showAsAction="ifRoom"/>
-    
-</menu>
+      
+</menu>	
