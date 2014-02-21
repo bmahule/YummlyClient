@@ -6,12 +6,13 @@
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
-    <item android:id="@+id/ic_search"
+   <item android:id="@+id/ic_search"
+          android:orderInCategory="5"
+          android:title="Search"
           android:icon="@drawable/ic_search"
-          android:title="@string/ic_search"
-          android:hint="@string/hintSearchTerm"
-          android:showAsAction="always"
-          android:actionViewClass="android.widget.SearchView" />
+          android:showAsAction="ifRoom|collapseActionView"
+          android:actionLayout="@layout/activity_home"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView" />
     
     <item android:id="@+id/ic_favorites"
           android:icon="@drawable/ic_favorites"

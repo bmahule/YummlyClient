@@ -29,8 +29,8 @@ public class RecipeDetailsMiddleFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
     	// TODO Auto-generated method stub
     	Recipe recipe = (Recipe) getActivity().getIntent().getSerializableExtra("result");
-    	tvTime.setText(recipe.getPrepTime());
-    	tvRating.setText(recipe.getRating());
+    	tvTime.setText(recipe.getRecipePrepTime());
+    	tvRating.setText(recipe.getRecipeRating());
     	super.onActivityCreated(savedInstanceState);
     }
 }

@@ -17,5 +17,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_search_recipe">SearchRecipeActivity</string>
     <string name="title_activity_recipe_details">RecipeDetailsActivity</string>
+    <string name="title_activity_favorite_recipe">FavoriteRecipeActivity</string>
+    <string name="title_activity_recipe_search">RecipeSearchActivity</string>
+    <string name="title_activity_favorite_recipe_list">FavoriteRecipeListActivity</string>
 
 </resources>

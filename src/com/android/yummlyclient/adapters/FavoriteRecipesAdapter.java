@@ -2,38 +2,28 @@ package com.android.yummlyclient.adapters;
 
 import java.util.ArrayList;
 
+import com.android.yummlyclient.R;
+import com.android.yummlyclient.models.FavoriteRecipe;
+import com.android.yummlyclient.models.Recipe;
+import com.loopj.android.image.SmartImageView;
 
-
-
-
-
-//import android.R;
 import android.content.Context;
-import android.content.Intent;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.yummlyclient.R;
-import com.android.yummlyclient.models.Recipe;
-import com.loopj.android.image.SmartImageView;
-
-public class RecipesAdapter extends ArrayAdapter<Recipe> {
-
-	public RecipesAdapter(Context context, ArrayList<Recipe> recipes) {
-		super(context, 0, recipes);  
+public class FavoriteRecipesAdapter extends ArrayAdapter<FavoriteRecipe> {
+	public FavoriteRecipesAdapter(Context context, ArrayList<FavoriteRecipe> favRecipes) {
+		super(context, 0, favRecipes);  
 	}
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) { 
-		Recipe recipe = this.getItem(position);
+		FavoriteRecipe favRecipe = this.getItem(position);
 		RelativeLayout rlRecipe;
 		SmartImageView svImageRecipe;
 		TextView tvRecipeName;
@@ -49,10 +39,11 @@ public class RecipesAdapter extends ArrayAdapter<Recipe> {
 		
 		svImageRecipe = (SmartImageView) rlRecipe.findViewById(R.id.ivRecipe);
 		tvRecipeName = (TextView) rlRecipe.findViewById(R.id.tvName);
-		svImageRecipe.setImageUrl(recipe.getRecipeUrl());	
-		Log.d("debug", "URL  : " + recipe.getRecipeUrl());
-		tvRecipeName.setText(recipe.getRecipeName());
+		svImageRecipe.setImageUrl(favRecipe.getRecipeUrl());	
+		Log.d("debug", "URL  : " + favRecipe.getRecipeUrl());
+		tvRecipeName.setText(favRecipe.getRecipeName());
 		
 		return rlRecipe;
+		
 	}
 }

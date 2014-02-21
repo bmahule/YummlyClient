@@ -18,5 +18,15 @@
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tvRecipeName" />
+    
+    <ImageView
+        android:id="@+id/ivFavoriteItem"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/star" />
 
 </RelativeLayout>

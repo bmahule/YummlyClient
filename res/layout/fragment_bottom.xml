@@ -8,10 +8,8 @@
         android:id="@+id/lvIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:text="@string/lvIngredients" >
-    </ListView>
-    
+    </ListView>  
 
 </RelativeLayout>

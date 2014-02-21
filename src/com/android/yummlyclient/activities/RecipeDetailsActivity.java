@@ -34,6 +34,7 @@ public class RecipeDetailsActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_recipe_details);
+		/*
 		RecipeDetailsTopFragment topFragment = new RecipeDetailsTopFragment();//create the fragment instance for the top fragment
         RecipeDetailsMiddleFragment middleFragment = new RecipeDetailsMiddleFragment();//create the fragment instance for the middle fragment
         RecipeDetailsBottomFragment bottomFragment = new RecipeDetailsBottomFragment();//create the fragment instance for the bottom fragment
@@ -43,9 +44,10 @@ public class RecipeDetailsActivity extends FragmentActivity {
         FragmentTransaction transaction=manager.beginTransaction();//create an instance of Fragment-transaction
 
         transaction.add(R.id.flTopFragment, topFragment, "Frag_Top_tag");
-        transaction.add(R.id.flMiddleFragment, middleFragment, "Frag_Middle_tag");
-        transaction.add(R.id.flBottomFragment, bottomFragment, "Frag_Bottom_tag");
-        transaction.commit();
+        transaction.add(R.id.flMiddleFragment, middleFragment, "Frag_Bottom_tag");
+        //transaction.add(R.id.flBottomFragment, bottomFragment, "Frag_Middle_tag");
+        
+        transaction.commit();*/
 	}
 
 	@Override

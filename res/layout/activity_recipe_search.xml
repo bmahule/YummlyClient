@@ -6,11 +6,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SearchRecipeActivity" >
-
-    <TextView
-        android:text="@+id/tv_search_items" 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:background="@drawable/shadow_gredient"
+    tools:context=".RecipeSearchActivity" >
+    
+    <GridView
+        android:id="@+id/gvSearchdRecipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2" 
+        android:columnWidth="400dp">
+    </GridView>
 
 </RelativeLayout>

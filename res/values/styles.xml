@@ -19,10 +19,12 @@
     </style>
     
     <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">#FFFFFF</item>
-        <item name="android:text"></item>
+        <item name="android:background">#0099CC</item>0099CC
+        <item name="android:textColor">#FAFAFA</item>
     </style>
     
-    
+    <!-- style name="Widget.Sherlock.SearchAutoCompleteTextView.DarkActionBar">
+        <item name="android:textColor">?attr/textColorPrimaryInverse</item>
+	</style-->
 
 </resources>

@@ -27,18 +27,9 @@
         android:shadowRadius="0.01"
         android:textSize="12sp" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:scaleType="fitXY"
-        android:layout_alignBottom="@+id/ivRecipe"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="5dp"
-        android:background="#FFFFFF"
-        android:src="@drawable/star" />
+    
 
-    <ImageView
+    <!-- ImageView
         android:id="@+id/imageView2"
         android:layout_width="15dp"
         android:layout_height="15dp"
@@ -46,6 +37,6 @@
         android:layout_alignRight="@+id/ivRecipe"
         android:layout_marginRight="5dp"
         android:background="#FFFFFF"
-        android:src="@drawable/info" />
+        android:src="@drawable/info" /-->
 
 </RelativeLayout>

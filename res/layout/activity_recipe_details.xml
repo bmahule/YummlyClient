@@ -18,7 +18,7 @@
 
     </FrameLayout>
 
-    <FrameLayout
+    <!-- FrameLayout
         android:id="@+id/flMiddleFragment"
         android:layout_width="fill_parent"
         android:layout_height="150dp"
@@ -32,14 +32,14 @@
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_middle" />
 
-    </FrameLayout>
+    </FrameLayout-->
 
     <FrameLayout
         android:id="@+id/flBottomFragment"
         android:layout_width="fill_parent"
-        android:layout_height="150dp"
+        android:layout_height="350dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/flMiddleFragment" >
+        android:layout_below="@+id/flTopFragment" >
 
         <fragment
             android:id="@+id/fragmentBottom"
